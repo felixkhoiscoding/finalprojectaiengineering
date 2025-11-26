@@ -1,0 +1,29 @@
+{
+  "generation_date": "2025-11-26 23:34:39",
+  "data_end_date": "2025-09-01",
+  "total_observations": 520,
+  "models": {
+    "ARIMA": {
+      "horizons": "1-36 months",
+      "total_forecasts": 666,
+      "order": "(1,1,1)"
+    },
+    "Naive": {
+      "horizons": "1-36 months",
+      "total_forecasts": 666,
+      "method": "last_value_persistence"
+    },
+    "Prophet": {
+      "horizons": "1-36 months",
+      "total_forecasts": 666,
+      "parameters": "yearly_seasonality=True"
+    },
+    "LSTM": {
+      "horizons": "1-12 months",
+      "total_forecasts": 78,
+      "architecture": "Sequential LSTM",
+      "epochs": 100,
+      "limitation": "Maximum 12 months due to error accumulation"
+    }
+  }
+}
