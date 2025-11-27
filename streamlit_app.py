@@ -47,6 +47,22 @@ page = st.sidebar.radio("Go to", ["🎯 About This Project", "📈 Overview", "�
 # Load data
 @st.cache_data
 def load_project_data():
+    # DEBUG: Print paths to help diagnose Streamlit Cloud issue
+    st.write(f"DEBUG: Project Root: {project_root}")
+    st.write(f"DEBUG: Raw Data Path: {RAW_DATA_PATH}")
+    
+    if not RAW_DATA_PATH.exists():
+        st.error(f"❌ File not found at: {RAW_DATA_PATH}")
+        # List contents of parent directories to debug
+        if RAW_DATA_PATH.parent.exists():
+            st.write(f"Contents of {RAW_DATA_PATH.parent}:")
+            st.write([p.name for p in RAW_DATA_PATH.parent.iterdir()])
+        else:
+            st.error(f"Directory {RAW_DATA_PATH.parent} does not exist!")
+            if RAW_DATA_PATH.parent.parent.exists():
+                st.write(f"Contents of {RAW_DATA_PATH.parent.parent}:")
+                st.write([p.name for p in RAW_DATA_PATH.parent.parent.iterdir()])
+    
     df = load_data(filepath=RAW_DATA_PATH, sheet_name='Monthly')
     split_idx = len(df) - TEST_SIZE
     train = df.iloc[:split_idx].copy()
