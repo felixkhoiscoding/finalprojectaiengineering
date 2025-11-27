@@ -41,11 +41,32 @@ import os
 from pathlib import Path
 
 # Project root directory
-PROJECT_ROOT = Path(r"C:\1 DATA D\AI\BOOTCAMP\AI Kelas Pengganti\Final Project")
+# Project root directory
+# Dynamic path for compatibility with Streamlit Cloud
+# Method 1: Relative to this config file
+PROJECT_ROOT = Path(__file__).parent.parent
+
+# Method 2: Current working directory (backup)
+if not (PROJECT_ROOT / "data").exists():
+    PROJECT_ROOT = Path.cwd()
 
 # Data paths
 DATA_DIR = PROJECT_ROOT / "data"
 RAW_DATA_PATH = DATA_DIR / "raw" / "WPU101704.xlsx"
+
+# Verify raw data path exists, if not try to find it
+if not RAW_DATA_PATH.exists():
+    # Try looking in current directory
+    potential_path = Path("data/raw/WPU101704.xlsx")
+    if potential_path.exists():
+        RAW_DATA_PATH = potential_path.resolve()
+        PROJECT_ROOT = RAW_DATA_PATH.parent.parent.parent
+    else:
+        # Try looking one level up
+        potential_path = Path("../data/raw/WPU101704.xlsx")
+        if potential_path.exists():
+            RAW_DATA_PATH = potential_path.resolve()
+
 PROCESSED_DATA_PATH = DATA_DIR / "processed" / "processed_data.csv"
 
 # Model paths
