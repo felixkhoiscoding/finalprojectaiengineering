@@ -265,8 +265,7 @@ if page == "🎯 About This Project":
     st.subheader("📈 Business Impact")
     
     col1, col2 = st.columns(2)
-    
-   with col1:
+    with col1:
         st.success("""
         **Potential Benefits for Contractors:**
         
@@ -282,7 +281,7 @@ if page == "🎯 About This Project":
         ✅ **Time Savings**  
         Instant scenario analysis vs. manual spreadsheet work
         """)
-    
+        
     with col2:
         st.info("""
         **Project Statistics:**
@@ -1054,4 +1053,5 @@ Felix Kho
 - **Best Test:** LSTM (≤12mo)
 - **Simplest:** Naive
 """)
+
 
