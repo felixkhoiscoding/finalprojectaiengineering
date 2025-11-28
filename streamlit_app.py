@@ -297,9 +297,6 @@ if page == "🎯 About This Project":
         
         📈 **1-36 months** Forecast Horizons  
         (Short-term to Long-term planning)
-        
-        ⚡ **<1 second** Loading Time  
-        (GPU-accelerated pre-computation)
         """)
     
     st.markdown("---")
@@ -1053,5 +1050,6 @@ Felix Kho
 - **Best Test:** LSTM (≤12mo)
 - **Simplest:** Naive
 """)
+
 
 
