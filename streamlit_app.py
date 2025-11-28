@@ -1,6 +1,6 @@
 """
 Streamlit App for Time-Series Forecasting
-Hot Rolled Steel Price Forecasting Dashboard
+Producer Price Index (Hot Rolled Steel) Forecasting Dashboard
 """
 
 import streamlit as st
@@ -31,7 +31,7 @@ st.set_page_config(
 
 # Title and Caption 
 st.title("🏗️ Hot Rolled Steel Price Forecasting")
-st.markdown("**AI-Powered Time Series Analysis & Risk Management**")
+st.markdown("**Time Series Analysis & Risk Management**")
 st.caption("""Made by : Felix Kho  
            Github : felixkhoiscoding    
            Data source : [FRED - WPU101704](https://fred.stlouisfed.org/series/WPU101704)""")
@@ -47,10 +47,6 @@ page = st.sidebar.radio("Go to", ["🎯 About This Project", "📈 Overview", "�
 # Load data
 @st.cache_data
 def load_project_data():
-    # DEBUG: Print paths to help diagnose Streamlit Cloud issue
-    st.write(f"DEBUG: Project Root: {project_root}")
-    st.write(f"DEBUG: Raw Data Path: {RAW_DATA_PATH}")
-    
     if not RAW_DATA_PATH.exists():
         st.error(f"❌ File not found at: {RAW_DATA_PATH}")
         # List contents of parent directories to debug
