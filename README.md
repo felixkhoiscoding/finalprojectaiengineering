@@ -162,8 +162,6 @@ To enable instant loading and cloud deployment:
 **Honest Disclosures:**
 - Pre-computed forecasts acknowledged in UI
 - LSTM limited to 12 months (documented)
-- Model performance clearly stated (not cherry-picked)
-- Academic integrity maintained throughout
 
 ---
 
