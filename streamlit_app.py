@@ -266,32 +266,41 @@ if page == "🎯 About This Project":
     
     col1, col2 = st.columns(2)
     
-    with col1:
+   with col1:
         st.success("""
         **Potential Benefits for Contractors:**
         
-        ✅ **Better Planning:** Make informed decisions based on data, not guesswork
+        ✅ **Better Planning**  
+        Make informed decisions based on data, not guesswork
         
-        ✅ **Risk Mitigation:** Quantify price uncertainty to set appropriate contingencies
+        ✅ **Risk Mitigation**  
+        Quantify price uncertainty to set appropriate contingencies
         
-        ✅ **Competitive Advantage:** Data-backed bids vs. competitors using intuition
+        ✅ **Competitive Advantage**  
+        Data-backed bids vs. competitors using intuition
         
-        ✅ **Time Savings:** Instant scenario analysis vs. manual spreadsheet work
+        ✅ **Time Savings**  
+        Instant scenario analysis vs. manual spreadsheet work
         """)
     
     with col2:
         st.info("""
         **Project Statistics:**
         
-        📊 **520 months** of historical data (1982-2025)
+        📊 **520 months** of historical data  
+        (June 1982 - September 2025)
         
-        🤖 **9 algorithms** trained and evaluated
+        🧠 **9 algorithms** trained & evaluated  
+        (From Baseline to Deep Learning)
         
-        🎯 **1.73% MAPE** - LSTM test accuracy
+        🎯 **1.73% MAPE** Test Accuracy  
+        (Mean Absolute Percentage Error)
         
-        📈 **1-36 months** forecast horizons available
+        📈 **1-36 months** Forecast Horizons  
+        (Short-term to Long-term planning)
         
-        ⚡ **<1 second** loading time (pre-computed)
+        ⚡ **<1 second** Loading Time  
+        (GPU-accelerated pre-computation)
         """)
     
     st.markdown("---")
@@ -1045,3 +1054,4 @@ Felix Kho
 - **Best Test:** LSTM (≤12mo)
 - **Simplest:** Naive
 """)
+
