@@ -1,6 +1,6 @@
 """
 Streamlit App for Time-Series Forecasting
-Producer Price Index (Hot Rolled Steel) Forecasting Dashboard
+Hot Rolled Steel Price Forecasting Dashboard
 """
 
 import streamlit as st
@@ -22,8 +22,8 @@ from config.config import RAW_DATA_PATH, TEST_SIZE, FORECAST_HORIZON
 
 # Page config
 st.set_page_config(
-    page_title="PPI Forecasting Dashboard",
-    page_icon="📊",
+    page_title="Hot Rolled Steel Price Forecasting",
+    page_icon="🏗️",
     layout="wide"
 )
 #Caption
