@@ -7,7 +7,7 @@
 
 This project forecasts Producer Price Index (PPI) for Hot Rolled Steel using multiple time-series models, providing construction contractors with data-driven tools for budget planning and risk management.
 
-**Live Dashboard:** `streamlit run streamlit_app.py` or access [streamli](https://constructionsteelpriceforecast.streamlit.app/)
+**Live Dashboard:** `streamlit run streamlit_app.py` or access [streamlit](https://constructionsteelpriceforecast.streamlit.app/)
 
 ---
 
