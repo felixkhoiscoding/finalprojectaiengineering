@@ -30,8 +30,8 @@ st.set_page_config(
 
 
 # Title and Caption 
-st.title("📊 Producer Price Index Forecasting")
-st.markdown("**Hot Rolled Steel - Time Series Analysis & Prediction**")
+st.title("🏗️ Hot Rolled Steel Price Forecasting")
+st.markdown("**AI-Powered Time Series Analysis & Risk Management**")
 st.caption("""Made by : Felix Kho  
            Github : felixkhoiscoding    
            Data source : [FRED - WPU101704](https://fred.stlouisfed.org/series/WPU101704)""")
